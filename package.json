@@ -1,0 +1,34 @@
+{
+  "name": "cirtual-project",
+  "version": "1.0.0",
+  "description": "recat web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zivile777/shop-webapp.git"
+  },
+  "author": "Zivile JG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zivile777/shop-webapp/issues"
+  },
+  "homepage": "https://github.com/zivile777/shop-webapp#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.5.5"
+  }
+}
