@@ -1,21 +1,29 @@
-const path = require('path');
+import path from "path";
 
-module.exports = {
-    entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-      },
-    module: {
-        rules: [
-            {
-                test: /\.jsx?$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-              },
-        ],
-      },
-    devServer: {
-        contentBase: path.resolve(__dirname, 'dist'),
-      },
-  };
+export default {
+	entry: path.resolve("./public/index.js"),
+	output: {
+		path: path.resolve(__dirname, "public"),
+		publicPath: "/bundle/",
+		filename: "build.js",
+		sourceMapFilename: "build.js.map"
+	},
+	devServer: {
+		contentBase: path.resolve("./public")
+	},
+	devtool: "source-map",
+	resolve: {
+		extensions: [".js", ".jsx", ".json"]
+	},
+	module: {
+		rules: [
+			{
+				test: /\.jsx?$/,
+				use: {
+					loader: "babel-loader"
+				},
+				include: [path.resolve("./public")]
+			}
+		]
+	}
+};
