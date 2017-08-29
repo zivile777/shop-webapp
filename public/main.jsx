@@ -75,6 +75,7 @@ class Main extends React.Component {
     .then(responseJson =>
       this.setState({
         data: responseJson,
+        filteredData: responseJson,
       }))
       .catch(() => {
         this.setState({
