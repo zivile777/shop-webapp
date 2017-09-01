@@ -72,16 +72,20 @@ class Main extends React.Component {
         };
     return fetch(url, options)
     .then(response => response.json())
-    .then(responseJson =>
+    .then(fetch('https://enigmatic-headland-61720.herokuapp.com/api/users') //fetching users
+    .then(response => response.json())
+    .then((responseJson) =>
       this.setState({
         data: responseJson,
         filteredData: responseJson,
-      }))
-      .catch(() => {
-        this.setState({
-          selectValue: [],
-        });
+      })
+    ).catch(() => {
+      console.log('error fetching data');
+      this.setState({
+        data: [],
+        filteredData: [],
       });
+    }));
   }
 
   render () {
